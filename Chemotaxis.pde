@@ -39,7 +39,7 @@ void setup() {
 
 void draw() {
   fill(0, 0, 0, 20);
-  rect(0, 0, 1000, 1000);
+  rect(0, 0, 1500, 1500);
   xAvg = 0;
   yAvg = 0;
   for (int i = 0; i<colony.length; i++) {
