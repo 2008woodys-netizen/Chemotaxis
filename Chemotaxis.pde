@@ -13,7 +13,7 @@ class Cell {
   void show() {
     noStroke();
     fill(myColor);
-    ellipse((float)x, (float)y, (int)(Math.random()*2+2), (int)(Math.random()*2+2));
+    ellipse((float)x, (float)y, 1, 1);
   }
   void walk() {
     double xDist = (mouseX + xAvg) / 2 -x;
@@ -22,9 +22,9 @@ class Cell {
     double force = 1000 / (dist * dist);
     xMouse = force * (xDist);
     yMouse = force * (yDist);
-    x += -xSwarm * 0.1 + xMouse + Math.random()*20 -10;
+    x += -xSwarm * 0.05 + xMouse + Math.random()*2 -1;
     //x += xMouse * 0.01 + Math.random()*10 -5;
-    y +=ySwarm * 0.1 + yMouse + Math.random()*20 -10;
+    y +=ySwarm * 0.05 + yMouse + Math.random()*2 -1;
     //y += yMouse * 0.01 + Math.random()*10 -5;
   }
 }
@@ -33,7 +33,7 @@ Cell [] colony;
 
 void setup() {
   size(1500, 1500);
-  colony = new Cell[500];
+  colony = new Cell[10000];
   for (int i = 0; i<colony.length; i++)
     colony[i] = new Cell((int)((Math.random()*1000)), (int)((Math.random()*1000)));
 }
@@ -56,6 +56,4 @@ void draw() {
   fill(255);
   println("x" + xAvg);
   println("y" + yAvg);
-}
-
 
