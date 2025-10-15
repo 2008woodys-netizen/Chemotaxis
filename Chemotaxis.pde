@@ -56,4 +56,4 @@ void draw() {
   fill(255);
   println("x" + xAvg);
   println("y" + yAvg);
-
+}
