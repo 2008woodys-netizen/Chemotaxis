@@ -33,9 +33,9 @@ Cell [] colony;
 
 void setup() {
   size(1500, 1500);
-  colony = new Cell[10000];
+  colony = new Cell[5000];
   for (int i = 0; i<colony.length; i++)
-    colony[i] = new Cell((int)((Math.random()*1000)), (int)((Math.random()*1000)));
+    colony[i] = new Cell((int)((Math.random()*1500)), (int)((Math.random()*1500)));
 }
 
 void draw() {
