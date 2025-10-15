@@ -11,8 +11,9 @@ class Cell {
     y = insertY;
   }
   void show() {
+    noStroke();
     fill(myColor);
-    ellipse((float)x, (float)y, (int)(Math.random()*5+20), (int)(Math.random()*5+20));
+    ellipse((float)x, (float)y, (int)(Math.random()*2+2), (int)(Math.random()*2+2));
   }
   void walk() {
     double xDist = (mouseX + xAvg) / 2 -x;
